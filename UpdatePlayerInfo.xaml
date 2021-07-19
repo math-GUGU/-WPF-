@@ -1,0 +1,53 @@
+﻿<Page x:Class="primer_league.UpdatePlayerInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:primer_league"
+      mc:Ignorable="d" 
+      d:DesignHeight="450"
+      Title="UpdatePlayerInfo" Height="517" Width="616" Loaded="Page_Loaded" >
+
+    <Grid Background="White" Margin="0,0,10,0.333">
+        <TextBlock HorizontalAlignment="Left" Margin="34,31,0,0" TextWrapping="Wrap" Text="请输入要修改的球员的Id" VerticalAlignment="Top" Height="28" Width="144"/>
+        <TextBox Name="idTextbox" HorizontalAlignment="Left" Height="23" Margin="183,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Button Name="selectPlayerButton" Content="查找球员" HorizontalAlignment="Left" Margin="324,31,0,0" VerticalAlignment="Top" Width="77" Height="23" Click="SelectPlayerButton_Click"/>
+        <Button Name="deletePlayerBuuton" Content="删除球员" HorizontalAlignment="Left" Margin="229,464,0,0" VerticalAlignment="Top" Width="75" Click="DeletePlayerBuuton_Click"/>
+        <Button Name="sendButton" Content="确认修改" HorizontalAlignment="Left" Margin="114,464,0,0" VerticalAlignment="Top" Width="76" Click="SendButton_Click"/>
+        <Button Name="insertPlayerButton" Content="增加新球员" HorizontalAlignment="Left" Margin="446,31,0,0" VerticalAlignment="Top" Width="85" Height="28" Click="InsertPlayerButton_Click"/>
+        <Grid Name="abilityUpdateGrid" HorizontalAlignment="Left" Height="212" Margin="0,214,0,0" VerticalAlignment="Top" Width="554">
+            <TextBox Text="{Binding Path=playerPAS, Mode=OneWay}" Name="pasTextbox" HorizontalAlignment="Left" Height="23" Margin="112,61,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="91"/>
+            <TextBlock HorizontalAlignment="Left" Margin="32,67,0,0" TextWrapping="Wrap" Text="PAS" VerticalAlignment="Top" Height="16" Width="60"/>
+            <TextBox Text="{Binding Path=playerDEF, Mode=OneWay}" Name="defTextbox" HorizontalAlignment="Left" Height="23" Margin="112,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91"/>
+            <TextBlock HorizontalAlignment="Left" Margin="32,122,0,0" TextWrapping="Wrap" Text="DEF" VerticalAlignment="Top" Height="16" Width="60"/>
+            <TextBox Text="{Binding Path=playerPAC, Mode=OneWay}" Name="pacTextbox" HorizontalAlignment="Left" Height="23" Margin="112,169,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="91"/>
+            <TextBlock HorizontalAlignment="Left" Margin="32,177,0,0" TextWrapping="Wrap" Text="PAC" VerticalAlignment="Top" Height="16" Width="60"/>
+            <TextBox Text="{Binding Path=playerDRI, Mode=OneWay}" Name="driTextbox" HorizontalAlignment="Left" Height="23" Margin="293,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91"/>
+            <TextBlock HorizontalAlignment="Left" Margin="228,67,0,0" TextWrapping="Wrap" Text="DRI" VerticalAlignment="Top" Height="16" Width="60"/>
+            <TextBox Text="{Binding Path=playerSHO, Mode=OneWay}" Name="shoTextbox" HorizontalAlignment="Left" Height="23" Margin="293,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91"/>
+            <TextBlock HorizontalAlignment="Left" Margin="228,122,0,0" TextWrapping="Wrap" Text="SHO" VerticalAlignment="Top" Height="16" Width="60"/>
+            <TextBox Text="{Binding Path=playerPHY, Mode=OneWay}" Name="phyTextbox" HorizontalAlignment="Left" Height="23" Margin="293,169,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="91"/>
+            <TextBlock HorizontalAlignment="Left" Margin="228,177,0,0" TextWrapping="Wrap" Text="PHY" VerticalAlignment="Top" Height="16" Width="60"/>
+        </Grid>
+        <Grid Name="playerUpdateGrid" HorizontalAlignment="Left" Height="177" Margin="0,59,0,0" VerticalAlignment="Top" Width="554">
+            <TextBlock HorizontalAlignment="Left" Margin="28,17,0,0" TextWrapping="Wrap" Text="姓名" VerticalAlignment="Top" Height="16" Width="52"/>
+            <TextBlock HorizontalAlignment="Left" Margin="28,64,0,0" TextWrapping="Wrap" Text="国籍" VerticalAlignment="Top" Height="16" Width="52"/>
+            <TextBlock HorizontalAlignment="Left" Margin="282,57,0,0" TextWrapping="Wrap" Text="出生日期" VerticalAlignment="Top" Height="28" Width="114"/>
+            <TextBlock HorizontalAlignment="Left" Margin="28,109,0,0" TextWrapping="Wrap" Text="位置" VerticalAlignment="Top" Height="16" Width="60"/>
+            <TextBlock HorizontalAlignment="Left" Margin="282,108,0,0" TextWrapping="Wrap" Text="惯用脚" VerticalAlignment="Top" Height="16" Width="60"/>
+            <DatePicker Text="{Binding Path=playerBirth,StringFormat='yyyy/MM/dd', Mode=OneWay}" Name="birthDate" HorizontalAlignment="Left" Margin="380,53,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox Text="{Binding Path=playerName, Mode=OneWay}" Name="nameTextbox"  HorizontalAlignment="Left" Height="23" Margin="107,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+            <TextBox Text="{Binding Path=playerNation, Mode=OneWay}" Name="nationTextbox"  HorizontalAlignment="Left" Height="23" Margin="107,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox Text="{Binding Path=playerFoot, Mode=OneWay}" Name="footTextbox" HorizontalAlignment="Left" Height="23" Margin="380,102,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+            <TextBox Text="{Binding Path=playerPosition, Mode=OneWay}" Name="positionTextbox" HorizontalAlignment="Left" Height="23" Margin="107,107,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="282,17,0,0" TextWrapping="Wrap" Text="号码" VerticalAlignment="Top" Height="16" Width="52"/>
+            <TextBox Text="{Binding Path=playerNumber , Mode=OneWay}" Name="numberTextbox" HorizontalAlignment="Left" Height="23" Margin="380,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="28,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="60" Text="所属俱乐部"/>
+            <ComboBox Name="clubCombobox" HorizontalAlignment="Left" Margin="107,150,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="282,150,0,0" TextWrapping="Wrap" Text="进球数" VerticalAlignment="Top" Height="16" Width="60"/>
+            <TextBox Text="{Binding Path=playerGoal, Mode=OneWay}" x:Name="goalTextbox" HorizontalAlignment="Left" Height="23" Margin="380,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <Button x:Name="sendInsertPlayerBuuton" Content="确认添加" HorizontalAlignment="Left" Margin="345,464,0,0" VerticalAlignment="Top" Width="75" Click="SendInsertPlayerBuuton_Click"/>
+
+    </Grid>
+</Page>

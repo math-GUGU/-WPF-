@@ -1,0 +1,66 @@
+﻿<Window x:Class="primer_league.ScoreBoardList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:primer_league"
+        mc:Ignorable="d"
+        Title="ScoreBoardList" Height="450" Width="392" Loaded="Window_Loaded">
+    <Grid Margin="-3,0,3.333,-0.333">
+        <ListView x:Name="scoreBoardListview" HorizontalAlignment="Left" Height="352" Margin="23,54,0,0" VerticalAlignment="Top" Width="346" RenderTransformOrigin="0.459,0.595" Background="White">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="排名" Width="45" DisplayMemberBinding="{Binding scoreboardNo}" />
+                    <GridViewColumn Header="球队" Width="115" DisplayMemberBinding="{Binding scoreboardName}" />
+                    <GridViewColumn Header="胜" Width="35" DisplayMemberBinding="{Binding scoreboardWin}" />
+                    <GridViewColumn Header="平" Width="35" DisplayMemberBinding="{Binding scoreboardEqual}" />
+                    <GridViewColumn Header="负" Width="35" DisplayMemberBinding="{Binding scoreboardLose}"/>
+                    <GridViewColumn Header="积分" Width="55" DisplayMemberBinding="{Binding scoreScore}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Image Source="PHOTO\logo.png" HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="125"/>
+        <Ellipse Fill="#FF5E1A45" HorizontalAlignment="Left" Height="49" Margin="325,0,0,0" VerticalAlignment="Top" Width="50">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF0BB0A3" HorizontalAlignment="Left" Height="32" Margin="302,0,0,0" VerticalAlignment="Top" Width="33">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF591A55" HorizontalAlignment="Left" Height="39" Margin="356,34,-10.667,0" VerticalAlignment="Top" Width="40">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF0BB0A3" HorizontalAlignment="Left" Height="15" Margin="274,27,0,0" VerticalAlignment="Top" Width="16">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF661D7D" HorizontalAlignment="Left" Height="20" Margin="248,0,0,401" VerticalAlignment="Bottom" Width="21" RenderTransformOrigin="0.4,0.563">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF0BB0A3" HorizontalAlignment="Left" Height="15" Margin="369,73,0,0" VerticalAlignment="Top" Width="16">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF0BB0A3" HorizontalAlignment="Left" Height="9" Margin="359,88,0,0" VerticalAlignment="Top" Width="10">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF661D7D" HorizontalAlignment="Left" Height="9" Margin="369,99,0,0" VerticalAlignment="Top" Width="10">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Label Content="ScoreBoard" HorizontalAlignment="Left" Margin="125,10,0,0" VerticalAlignment="Top" Height="32" Width="123" Background="White" Foreground="#FF3D0856" FontWeight="Bold" FontSize="18"/>
+
+    </Grid>
+</Window>

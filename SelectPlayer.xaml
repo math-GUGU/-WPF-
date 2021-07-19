@@ -1,0 +1,80 @@
+﻿<Page x:Class="primer_league.SelectPlayer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:primer_league"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SelectPlayer" Height="517" Width="616" Loaded="Page_Loaded">
+
+    <Grid Background="White">
+        <TextBox Name="searchTextBox" HorizontalAlignment="Left" Height="28" Margin="76,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" FontSize="18" TextChanged="SearchTextBox_TextChanged"/>
+        <ComboBox Name="searchCombobox" HorizontalAlignment="Left" Margin="350,91,0,0" VerticalAlignment="Top" Width="182" Height="28" FontSize="18"/>
+        <Button Name="searchButton" Content="搜索" HorizontalAlignment="Left" Margin="270,91,0,0" VerticalAlignment="Top" Width="52" Height="28" Background="{x:Null}" Click="SearchButton_Click" FontSize="18"/>
+        <ListView Name="playerInfoListview" MouseDoubleClick="PlayerInfoListview_MouseDoubleClick" GridViewColumnHeader.Click="Sort_Click"  HorizontalAlignment="Left" Height="336" Margin="74,149,0,0" VerticalAlignment="Top" Width="458" TextOptions.TextFormattingMode="Display">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="姓名" Width="120" DisplayMemberBinding="{Binding Path=playerName}" />
+                    <GridViewColumn Header="国籍" Width="80" DisplayMemberBinding="{Binding Path=playerNation}" />
+                    <GridViewColumn Header="所属俱乐部" Width="130" DisplayMemberBinding="{Binding Path=playerClub}" />
+                    <GridViewColumn Header="进球数" Width="60" DisplayMemberBinding="{Binding Path=playerGoal}" />
+                    <GridViewColumn Header="位置" Width="60" DisplayMemberBinding="{Binding Path=playerPosition}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Image Source="PHOTO\logo.png" Stretch="Fill" HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="136"/>
+        <Ellipse Fill="#FF590E59" HorizontalAlignment="Left" Height="59" Margin="-23,44,0,0" VerticalAlignment="Top" Width="59"/>
+        <Ellipse Fill="#FF9D149D" HorizontalAlignment="Left" Height="49" Margin="10,91,0,0" VerticalAlignment="Top" Width="49"/>
+        <Ellipse Fill="#FF9D149D" HorizontalAlignment="Left" Height="32" Margin="136,-16,0,0" VerticalAlignment="Top" Width="29"/>
+        <Ellipse Fill="#FF590E59" HorizontalAlignment="Left" Height="22" Margin="10,149,0,0" VerticalAlignment="Top" Width="22"/>
+        <Ellipse Fill="#FF590E59" HorizontalAlignment="Left" Height="13" Margin="155,0,0,465.333" VerticalAlignment="Bottom" Width="13" RenderTransformOrigin="1.295,0.28"/>
+        <Ellipse Fill="#FF590E59" HorizontalAlignment="Left" Height="59" Margin="583,480,-26,-21.667" VerticalAlignment="Top" Width="59"/>
+        <Ellipse Fill="#FF9D149D" HorizontalAlignment="Left" Height="52" Margin="553,455,0,0" VerticalAlignment="Top" Width="53"/>
+        <Ellipse Fill="#FF590E59" HorizontalAlignment="Left" Height="37" Margin="579,413,0,0" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.869,0.518"/>
+        <Ellipse Fill="#FF590E59" HorizontalAlignment="Left" Height="59" Margin="473,490,0,-31.667" VerticalAlignment="Top" Width="59"/>
+        <Ellipse Fill="#FF9D149D" HorizontalAlignment="Left" Height="30" Margin="553,378,0,0" VerticalAlignment="Top" Width="31"/>
+        <Rectangle Fill="#FF9D149D" HorizontalAlignment="Left" Height="14" Margin="232,10,0,0" VerticalAlignment="Top" Width="384"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="26" Margin="220,39,0,0" VerticalAlignment="Top" Width="29" RenderTransformOrigin="-0.42,0.326">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-44.425"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#FFAB65AB" HorizontalAlignment="Left" Height="13" Margin="256,24,0,0" VerticalAlignment="Top" Width="360" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.047"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="26" Margin="239,50,0,0" VerticalAlignment="Top" Width="29" RenderTransformOrigin="-0.42,0.326">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-44.425"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#FFFEB9FE" HorizontalAlignment="Left" Height="15" Margin="315,37,0,0" VerticalAlignment="Top" Width="301"/>
+        <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="57" Margin="312,63,0,0" VerticalAlignment="Top" Width="31" RenderTransformOrigin="-0.42,0.326">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-44.425"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+    </Grid>
+</Page>

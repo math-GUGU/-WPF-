@@ -1,0 +1,30 @@
+﻿<Window x:Class="primer_league.UpdateGameInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:primer_league"
+        mc:Ignorable="d"
+        Title="UpdateGameInfo" Height="522" Width="800" Loaded="Window_Loaded">
+    <Grid HorizontalAlignment="Left" Height="523" VerticalAlignment="Top" Width="790" Margin="0,-32,0,0" Background="White">
+        <TextBlock HorizontalAlignment="Left" Margin="167,84,0,0" TextWrapping="Wrap" Text="主场球队" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#FF4F1B54"/>
+        <TextBlock HorizontalAlignment="Left" Margin="167,160,0,0" TextWrapping="Wrap" Text="客场球队" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="White" Foreground="#FF3C003E"/>
+        <TextBlock HorizontalAlignment="Left" Margin="167,235,0,0" TextWrapping="Wrap" Text="比赛时间" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#FF3C003E"/>
+        <TextBlock HorizontalAlignment="Left" Margin="167,305,0,0" TextWrapping="Wrap" Text="主场球队得分" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#FF3C003E"/>
+        <TextBlock HorizontalAlignment="Left" Margin="167,380,0,0" TextWrapping="Wrap" Text="客场球队得分" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#FF3C003E"/>
+        <TextBox Name="hostGoalText" HorizontalAlignment="Left" Height="23" Margin="334,305,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="68" FontSize="20"/>
+        <TextBox Name="guestGoalText" HorizontalAlignment="Left" Height="23" Margin="334,380,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="69" FontSize="20"/>
+        <Button Name="updateButton" Content="确认修改" HorizontalAlignment="Left" Margin="283,450,0,0" VerticalAlignment="Top" Width="90" Opacity="100" Click="UpdateButton_Click" Height="30" Background="#FFFCFCFC" BorderBrush="White"  FontSize="14" FontWeight="Bold"/>
+        <Button Name="deleteButton" Content="删除该比赛" HorizontalAlignment="Left" Margin="408,450,0,0" VerticalAlignment="Top" Width="90" Click="DeleteButton_Click" Height="30" Background="White" BorderBrush="White" FontSize="14"  FontWeight="Bold"/>
+        <Button Name="insertButton" Content="添加比赛" HorizontalAlignment="Left" Margin="167,450,0,0" VerticalAlignment="Top" Width="90" Click="InsertButton_Click" Background="White" BorderBrush="White" Foreground="Black" Height="30" FontSize="14" FontWeight="Bold"/>
+        <ComboBox Name="hostCombo" HorizontalAlignment="Left" Margin="334,84,0,0" VerticalAlignment="Top" Width="164" FontSize="20"/>
+        <ComboBox Name="guestCombo" HorizontalAlignment="Left" Margin="334,160,0,0" VerticalAlignment="Top" Width="164" FontSize="20"/>
+        <TextBox x:Name="yearText" HorizontalAlignment="Left" Height="23" Margin="334,235,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="56" FontSize="16"/>
+        <TextBox x:Name="monthText" HorizontalAlignment="Left" Height="23" Margin="413,235,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="37" FontSize="16"/>
+        <TextBox x:Name="dayText" HorizontalAlignment="Left" Height="23" Margin="475,235,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="36" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="390,235,0,0" TextWrapping="Wrap" Text="年" VerticalAlignment="Top" Height="25" Width="23" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="450,235,0,0" TextWrapping="Wrap" Text="月" VerticalAlignment="Top" Height="25" Width="23" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="516,235,0,0" TextWrapping="Wrap" Text="日" VerticalAlignment="Top" Height="25" Width="23" FontSize="20"/>
+        <Image Source="PHOTO\LOGO.PNG" Stretch="Fill" HorizontalAlignment="Left" Height="92" VerticalAlignment="Top" Width="162" Margin="0,10,0,0"/>
+    </Grid>
+</Window>

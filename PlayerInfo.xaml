@@ -1,0 +1,265 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:primer_league"
+        xmlns:Properties="clr-namespace:primer_league.Properties" x:Class="primer_league.PlayerInfo"
+        mc:Ignorable="d"
+        Title="PlayerInfo"  Height="349.889" Width="553" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="364*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Fill="#FFFBFBFF" HorizontalAlignment="Left" Height="320" Stroke="White" VerticalAlignment="Top" Width="181"/>
+        <Image x:Name="backGround" Source="PHOTO\球员能力值背景.jpeg" HorizontalAlignment="Left" Height="320" VerticalAlignment="Top" Width="181" Margin="0"  Stretch="UniformToFill" OpacityMask="Black" />
+
+        <TextBox Name="bigNameTextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="22" Margin="23,166,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="129" Foreground="White" FontSize="18" FontWeight="Bold" TextAlignment="Center">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <Grid Name="playerShowGrid" HorizontalAlignment="Left" Height="320" Margin="178,1,-0.333,-0.333" VerticalAlignment="Top" Width="369" Grid.ColumnSpan="2">
+            <Rectangle Fill="#FFD2D7DD" Height="38" Margin="3,282,0,0" Stroke="White" VerticalAlignment="Top" Opacity="0.35" HorizontalAlignment="Left" Width="366"/>
+            <Rectangle Fill="#FFE2E2E2" HorizontalAlignment="Left" Height="38" Margin="3,244,0,0" Stroke="White" VerticalAlignment="Top" Width="366"/>
+            <Rectangle Fill="#FFD2D7DD" Height="38" Margin="3,206,0,0" Stroke="White" VerticalAlignment="Top" Opacity="0.35" HorizontalAlignment="Left" Width="366"/>
+            <Rectangle Fill="#FFE2E2E2" HorizontalAlignment="Left" Height="38" Margin="3,168,0,0" Stroke="White" VerticalAlignment="Top" Width="366"/>
+            <Rectangle Fill="#FFD2D7DD" Height="38" Margin="3,130,0,0" Stroke="White" VerticalAlignment="Top" Opacity="0.35" HorizontalAlignment="Left" Width="366"/>
+            <Rectangle Fill="#FFE2E2E2" HorizontalAlignment="Left" Height="38" Margin="3,92,0,0" Stroke="White" VerticalAlignment="Top" Width="366"/>
+            <Rectangle Fill="#FFD2D7DD" Height="38" Margin="3,54,0,0" Stroke="White" VerticalAlignment="Top" Opacity="0.35" HorizontalAlignment="Left" Width="366"/>
+            <Rectangle x:Name="nameContainer" Fill="#FFE2E2E2" Height="38" Margin="3,16,0,0" Stroke="White" VerticalAlignment="Top"/>
+            <Rectangle Fill="#FF3C475B" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="366" Margin="0,-3,0,0"/>
+
+            <TextBox x:Name="textBox_01" HorizontalAlignment="Left" Height="18" Margin="13,-2,0,0" TextWrapping="Wrap" Text="PLAYER DATA" VerticalAlignment="Top" Width="121" Foreground="#FFFFFDFD" FontSize="14" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Justify">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label x:Name="nameLabel" Content="Name" HorizontalContentAlignment="Left" Margin="13,15,296,274" VerticalContentAlignment="Top" Foreground="#FF737F93" ToolTip="姓名">
+                <Label.Background>
+                    <SolidColorBrush Color="#FF9E6B6B" Opacity="0"/>
+                </Label.Background>
+                <Label.BorderBrush>
+                    <SolidColorBrush Color="#FFF2F5FF" Opacity="0"/>
+                </Label.BorderBrush>
+            </Label>
+            <TextBox Text="{Binding Path=playerName}" IsReadOnly="True" x:Name="nameTextBox" HorizontalAlignment="Left" Height="19" Margin="13,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="#FF463131">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.SelectionBrush>
+                    <SolidColorBrush Color="#FF0078D7" Opacity="0"/>
+                </TextBox.SelectionBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label x:Name="goalLabel" Content="Goal" HorizontalContentAlignment="Left" Margin="13,88,296,209" VerticalContentAlignment="Top" Foreground="#FF737F93" ToolTip="进球数">
+                <Label.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </Label.Background>
+                <Label.BorderBrush>
+                    <SolidColorBrush Color="#FFF2F5FF" Opacity="0"/>
+                </Label.BorderBrush>
+            </Label>
+            <TextBox Text="{Binding Path=playerGoal}" IsReadOnly="True" x:Name="ageTextBox" HorizontalAlignment="Left" Height="19" Margin="13,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="#FF463131">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.SelectionBrush>
+                    <SolidColorBrush Color="#FF0078D7" Opacity="0"/>
+                </TextBox.SelectionBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label x:Name="nationLabel" Content="Nationality" HorizontalContentAlignment="Left" Margin="13,51,265,237" VerticalContentAlignment="Top" Foreground="#FF737F93" ToolTip="国籍">
+                <Label.Background>
+                    <SolidColorBrush Color="white" Opacity="0"/>
+                </Label.Background>
+                <Label.BorderBrush>
+                    <SolidColorBrush Color="#FFF2F5FF" Opacity="0"/>
+                </Label.BorderBrush>
+            </Label>
+            <TextBox Text="{Binding Path=playerNation}" IsReadOnly="True"  x:Name="nationalityTextBox" HorizontalAlignment="Left" Height="18" Margin="13,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="#FF463131">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.SelectionBrush>
+                    <SolidColorBrush Color="#FF0078D7" Opacity="0"/>
+                </TextBox.SelectionBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label x:Name="birthLabel" Content="Date Of Birth" HorizontalContentAlignment="Left" Margin="13,168,271,122" VerticalContentAlignment="Top" Foreground="#FF737F93" ToolTip="生日">
+                <Label.Background>
+                    <SolidColorBrush Color="white" Opacity="0"/>
+                </Label.Background>
+                <Label.BorderBrush>
+                    <SolidColorBrush Color="#FFF2F5FF" Opacity="0"/>
+                </Label.BorderBrush>
+            </Label>
+            <TextBox Text="{Binding Path=playerBIRTH}" IsReadOnly="True" x:Name="birthTextBox" HorizontalAlignment="Left" Height="21" Margin="13,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="#FF463131" >
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.SelectionBrush>
+                    <SolidColorBrush Color="#FF0078D7" Opacity="0"/>
+                </TextBox.SelectionBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label x:Name="clubLabel" Content="Club" HorizontalContentAlignment="Left" Margin="13,206,282,85" VerticalContentAlignment="Top" Foreground="#FF737F93" ToolTip="俱乐部">
+                <Label.Background>
+                    <SolidColorBrush Color="white" Opacity="0"/>
+                </Label.Background>
+                <Label.BorderBrush>
+                    <SolidColorBrush Color="#FFF2F5FF" Opacity="0"/>
+                </Label.BorderBrush>
+            </Label>
+            <TextBox Text="{Binding Path=playerClub}" IsReadOnly="True" x:Name="clubTextBox" HorizontalAlignment="Left" Height="21" Margin="13,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" FontWeight="Bold" Foreground="#FF463131">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.SelectionBrush>
+                    <SolidColorBrush Color="#FF0078D7" Opacity="0"/>
+                </TextBox.SelectionBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label x:Name="positionLabel" Content="Position" HorizontalContentAlignment="Left" Margin="13,242,271,52" VerticalContentAlignment="Top" Foreground="#FF737F93" ToolTip="守门员：GK 清道夫：SW 中后卫：DC 左/右边后卫：LB、RB 后腰：DM 中场 ：CM 前锋：ST">
+                <Label.Background>
+                    <SolidColorBrush Color="white" Opacity="0"/>
+                </Label.Background>
+                <Label.BorderBrush>
+                    <SolidColorBrush Color="#FFF2F5FF" Opacity="0"/>
+                </Label.BorderBrush>
+            </Label>
+            <TextBox Text="{Binding Path=playerPosition}" IsReadOnly="True" x:Name="positionTextBox" HorizontalAlignment="Left" Height="21" Margin="13,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" FontWeight="Bold" Foreground="#FF463131">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.SelectionBrush>
+                    <SolidColorBrush Color="#FF0078D7" Opacity="0"/>
+                </TextBox.SelectionBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+
+            <Label x:Name="footLabel" Content="Foot" HorizontalContentAlignment="Left" Margin="13,282,242,9" VerticalContentAlignment="Top" Foreground="#FF737F93" ToolTip="球员惯用脚">
+                <Label.Background>
+                    <SolidColorBrush Color="white" Opacity="0"/>
+                </Label.Background>
+                <Label.BorderBrush>
+                    <SolidColorBrush Color="#FFF2F5FF" Opacity="0"/>
+                </Label.BorderBrush>
+            </Label>
+            <TextBox Text="{Binding Path=playerFoot}" x:Name="workRateTextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="21" Margin="13,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" FontWeight="Bold" Foreground="#FF463131">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.SelectionBrush>
+                    <SolidColorBrush Color="#FF0078D7" Opacity="0"/>
+                </TextBox.SelectionBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+            <Label x:Name="NumberLabel" Content="Number" HorizontalContentAlignment="Left" Margin="13,126,295,171" VerticalContentAlignment="Top" Foreground="#FF737F93" ToolTip="号码">
+                <Label.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </Label.Background>
+                <Label.BorderBrush>
+                    <SolidColorBrush Color="#FFF2F5FF" Opacity="0"/>
+                </Label.BorderBrush>
+            </Label>
+            <TextBox Text="{Binding Path=playerNumber}" IsReadOnly="True" x:Name="ageTextBox_Copy" HorizontalAlignment="Left" Height="19" Margin="13,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" FontWeight="Bold" Foreground="#FF463131">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+                <TextBox.SelectionBrush>
+                    <SolidColorBrush Color="#FF0078D7" Opacity="0"/>
+                </TextBox.SelectionBrush>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBox.Background>
+            </TextBox>
+        </Grid>
+        <Grid Name="AbilityShowGrid" HorizontalAlignment="Left" Height="100" Margin="23,193,0,0" VerticalAlignment="Top" Width="148">
+            <Label Content="PAS" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Foreground="#FF79164C" ToolTip="传球" Background="#00000000" FontWeight="Bold"/>
+            <TextBox Text="{Binding Path=playerDRI}" x:Name="driTextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="16" Margin="77,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="21" SelectionBrush="#FFD1CA44" Foreground="#FF850404" CaretBrush="#FFDECDCD">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FFDE8D2B" Opacity="0"/>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <Label Content="DRI" HorizontalAlignment="Left" Margin="101,10,0,0" VerticalAlignment="Top" Foreground="#FF79164C" ToolTip="盘带" FontWeight="Bold"/>
+            <Label Content="PAC" HorizontalAlignment="Left" Margin="29,57,0,0" VerticalAlignment="Top" Foreground="#FF79164C" ToolTip="速度" FontWeight="Bold"/>
+            <Label Content="DEF" HorizontalAlignment="Left" Margin="30,32,0,0" VerticalAlignment="Top" Foreground="#FF79164C" ToolTip="防守" FontWeight="Bold"/>
+            <Label Content="PHY" HorizontalAlignment="Left" Margin="101,57,0,0" VerticalAlignment="Top" Foreground="#FF79164C" ToolTip="体格" FontWeight="Bold"/>
+            <Label Content="SHO" HorizontalAlignment="Left" Margin="101,32,0,0" VerticalAlignment="Top" Foreground="#FF79164C" ToolTip="射门" FontWeight="Bold"/>
+            <TextBox IsReadOnly="True" Text="{Binding Path=playerDEF}" x:Name="defTextBox" HorizontalAlignment="Left" Height="16" Margin="10,36,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="21" SelectionBrush="#FFD1CA44" Foreground="#FF850404" CaretBrush="#FFDECDCD">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FFDE8D2B" Opacity="0"/>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox IsReadOnly="True" Text="{Binding Path=playerPAC}" x:Name="pacTextBox" HorizontalAlignment="Left" Height="16" Margin="10,61,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="21" SelectionBrush="#FFD1CA44" Foreground="#FF850404" CaretBrush="#FFDECDCD">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FFDE8D2B" Opacity="0"/>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox IsReadOnly="True" Text="{Binding Path=playerSHO}" x:Name="shoTextBox" HorizontalAlignment="Left" Height="16" Margin="77,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="21" SelectionBrush="#FFD1CA44" Foreground="#FF850404" CaretBrush="#FFDECDCD" RenderTransformOrigin="0.476,2.438">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FFDE8D2B" Opacity="0"/>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox IsReadOnly="True" Text="{Binding Path=playerPHY}" x:Name="phyTextBox" HorizontalAlignment="Left" Height="16" Margin="77,61,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="21" SelectionBrush="#FFD1CA44" Foreground="#FF850404" CaretBrush="#FFDECDCD" RenderTransformOrigin="0.476,2.438">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FFDE8D2B" Opacity="0"/>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox IsReadOnly="True" Text="{Binding Path=playerPAS}" x:Name="pasTextBox" HorizontalAlignment="Left" Height="16" Margin="10,15,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="21" SelectionBrush="#FFD1CA44" Foreground="#FF850404" CaretBrush="#FFDECDCD">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FFDE8D2B" Opacity="0"/>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+        </Grid>
+        <Image Name="logoImage" HorizontalAlignment="Left" Height="100" Margin="42,51,0,0" VerticalAlignment="Top" Width="100" OpacityMask="#FFBC4848"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,126 @@
+﻿<Window x:Class="primer_league.球场"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:primer_league"
+        mc:Ignorable="d"
+        Title="球场" Height="273" Width="449">
+    <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" VerticalAlignment="Top" Width="136">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\阿森纳1.jpg" Stretch="Fill"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\埃弗顿2.jpg" Stretch="Fill"/>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\莱斯特城3.jpg" Stretch="Fill"/>
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\狼队4.jpg" Stretch="Fill"/>
+        <Image x:Name="image5" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\曼城5.jpeg" Stretch="Fill"/>
+        <Image x:Name="image6" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\曼联主场6.jpg" Stretch="Fill"/>
+        <Image x:Name="image7" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\切尔西主场7.jpg" Stretch="Fill"/>
+        <Image x:Name="image8" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\热刺8.jpg" Stretch="Fill"/>
+        <Image x:Name="image9" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="279" Source="PHOTO\field\西汉姆联9.jpg" Stretch="Fill"/>
+        <TextBox x:Name="textBox1" IsReadOnly="True" HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" Text="酋长球场（Emirates Stadium），又被译为 阿联酋航空球场或埃米尔球场，是 英格兰足球超级联赛 阿森纳的主场，能容纳观众60,000余人，球场于2006-07赛季正式启用。" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3" BorderThickness="0">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox2" IsReadOnly="True" HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" Text="建于1892年的古迪逊公园球场当时造价3000英镑，它是英国第一个四面都拥有双层看台的球场，是联赛中第一个有地下加热系统的球场，它的草坪。古迪逊公园球场的草坪摆放在一个巨大的石板上，而突出来的石板横切面上密密麻麻刻着无数传统资深球迷的名字" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3" BorderThickness="0">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox3" IsReadOnly="True" HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" Text="皇权球场是位于英格兰东米德兰兹莱斯特郡单一管理区莱斯特的体育场，为莱斯特城的主场球场，于2002年7月启用，全坐席可容32,500名观众，球场内每个座位均没有遮挡，在英格兰排第19位最大的体育场。" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox4" IsReadOnly="True"  HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" Text="莫利纽球场（英语：Molineux Stadium）位于英格兰西米德兰兹郡伍尔弗汉普顿的足球运动场，自1889年揭幕以来已是英超俱乐部狼队的主场球场，具有悠久的历史，是英格兰首批装置泛光灯的球场之一，更早于1950年代已举办欧洲俱乐部级的竞赛。近期主办英格兰U21的比赛；莫利纽于1972年举行首届欧洲联盟杯的决赛。" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3" BorderThickness="0">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox5" IsReadOnly="True"  HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" Text="曼彻斯特市球场（英语：City of Manchester Stadium），英文别名为COMS（运动场的英文缩写）、Eastlands（东地球场）及Sportcity（运动城），于2011年7月获阿提哈德航空冠名赞助称为阿提哈德球场（Etihad Stadium）" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3" BorderThickness="0">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox6" IsReadOnly="True"  HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" Text="老特拉福德球场（Old Trafford）是位于英格兰大曼彻斯特郡的一个全座位足球场。老特拉福德是英超球队曼联的主场，并拥有75,957个座位，是仅次于温布利球场的英格兰第二大的足球场。球场亦是全英国第三大及全欧洲第十一大的球场。老特拉福德亦是全英格兰三个欧洲足联五星级足球场之一。" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3" BorderThickness="0">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox7" IsReadOnly="True"  HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" Text="斯坦福桥球场（Stamford Bridge Stadium），由阿奇巴尔德·利思设计，它于1877 年建成而切尔西球会在1905 开始使用这个球场，已有一百周年的历史，位于伦敦富勒姆区的专业足球场，容量42522人次，是英格兰足球超级联赛俱乐部切尔西的主场。" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3" BorderThickness="0">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox8" IsReadOnly="True"  HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3" Text="白鹿巷球场原本只是隶属于啤酒商的一块苗圃。1899年，商人乔治·贝克维茨给这块草地围上了围栏，两端加上球门，于是，最原始状态的白鹿巷球场诞生了。2018年7月27日，热刺公布新球场名字为托特纳姆热刺体育场，白鹿巷球场成为历史" BorderThickness="0">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox9" IsReadOnly="True"  HorizontalAlignment="Left" Height="193" Margin="294,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Foreground="#FF3C73C3" Text="伦敦奥林匹克体育场俗称伦敦碗，是2012年夏季奥林匹克运动会的主场馆，位于伦敦斯特拉特福区，在2012年伦敦奥运会期间设置大约80,000个座位。伦敦奥林匹克体育场的规划开始于2007年夏天，并于2008年5月22日正式开工建造，于2011年3月29日完工" BorderThickness="0">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFFDFDFF" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FFCFD7E6" FontSize="9" Click="button1_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Margin="42,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FF9CAFD8" FontSize="9" RenderTransformOrigin="2.786,0.571" Click="button2_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Margin="72,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FF8C8FD6" FontSize="9" RenderTransformOrigin="2.786,0.571" Click="button3_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Margin="105,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FF6887CB" FontSize="9" RenderTransformOrigin="2.786,0.571" Click="button4_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Margin="140,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FF6D7EB8" FontSize="9" RenderTransformOrigin="2.786,0.571" Click="button5_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Margin="173,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FF7870CD" FontSize="9" RenderTransformOrigin="2.786,0.571" Click="button6_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Margin="209,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FF887DCD" FontSize="9" RenderTransformOrigin="2.786,0.571" Click="button7_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Margin="242,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FFACA4CF" FontSize="9" RenderTransformOrigin="2.786,0.571" Click="button8_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Margin="275,218,0,0" VerticalAlignment="Top" Width="14" Height="14" Foreground="Black" Background="#FFC5CAD8" FontSize="9" RenderTransformOrigin="2.786,0.571" Click="button9_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button10" Content="CLOSE" HorizontalAlignment="Left" Margin="355,213,0,0" VerticalAlignment="Top" Width="75" Background="#FFCBE1E6" Foreground="#FF14103C" Click="button10_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+    </Grid>
+</Window>
+

@@ -1,0 +1,154 @@
+﻿<Page x:Class="primer_league.SearchGame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:primer_league"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SearchGame" Height="517" Width="616" Loaded="Page_Loaded">
+
+    <Grid Background="#FFFCFCFC" Margin="0,0,0,0.333">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="438*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="searchButton" Content="搜索"  HorizontalAlignment="Left" Margin="238,52,0,0" VerticalAlignment="Top" Width="45" Height="28" Background="{x:Null}" Click="SearchButton_Click" FontSize="16" Grid.RowSpan="2">
+
+        </Button>
+        <ListView Name="gameInfoListview" MouseDoubleClick="GameInfoListview_MouseDoubleClick" HorizontalAlignment="Left" Height="368" Margin="44,33,0,0" VerticalAlignment="Top" Width="513" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="时间" Width="120" DisplayMemberBinding="{Binding Path=gameTimeShow}" />
+                    <GridViewColumn Header="主场球队" Width="150" DisplayMemberBinding="{Binding Path=gameHost}" />
+                    <GridViewColumn Header="客场球队" Width="150" DisplayMemberBinding="{Binding Path=gameGuest}" />
+                    <GridViewColumn Header="比分" Width="80" DisplayMemberBinding="{Binding Path=gameScore}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <DatePicker Name="gameShowDate" HorizontalAlignment="Left" Margin="320,52,0,0" VerticalAlignment="Top" Height="28" Width="147" FontSize="14" Grid.RowSpan="2"/>
+        <Button Name="searchByTimeButton" Content="按时间搜索" HorizontalAlignment="Left" Margin="487,54,0,0" VerticalAlignment="Top" Width="70" Height="26" Click="SearchByTimeButton_Click" Grid.RowSpan="2"/>
+        <ComboBox Name="searchGameCombo" HorizontalAlignment="Left" Margin="44,52,0,0" VerticalAlignment="Top" Width="194" Height="28" FontSize="18" Grid.RowSpan="2"/>
+        <Ellipse Fill="#FF5A9994" HorizontalAlignment="Left" Height="66" Margin="548,381,0,-9" VerticalAlignment="Top" Width="68" Grid.Row="1">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF0CB6A6" HorizontalAlignment="Left" Height="66" Margin="585,346,-37,0" VerticalAlignment="Top" Width="68" Grid.Row="1">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF12CBBB" HorizontalAlignment="Left" Height="44" Margin="512,401,0,-7" VerticalAlignment="Top" Width="45" Grid.Row="1">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF22C9BA" HorizontalAlignment="Left" Height="33" Margin="562,308,0,0" VerticalAlignment="Top" Width="34" Grid.Row="1">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF46ABA2" HorizontalAlignment="Left" Height="25" Margin="585,278,0,0" VerticalAlignment="Top" Width="26" Grid.Row="1">
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF528782" HorizontalAlignment="Left" Height="49" Margin="-74,384,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-53.326"/>
+                    <TranslateTransform X="48.689" Y="-5.702"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF22C9BA" HorizontalAlignment="Left" Height="66" Margin="2,419,0,-47" VerticalAlignment="Top" Width="68" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-53.326"/>
+                    <TranslateTransform X="5.85" Y="-21.684"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF22C9BA" HorizontalAlignment="Left" Height="33" Margin="21,308,0,0" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-53.326"/>
+                    <TranslateTransform X="-22.421" Y="32.348"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF22C9BA" HorizontalAlignment="Left" Height="25" Margin="44,278,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-53.326"/>
+                    <TranslateTransform X="-56.674" Y="30.801"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Ellipse Fill="#FF67F2E6" HorizontalAlignment="Left" Height="25" Margin="126,392,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-53.326"/>
+                    <TranslateTransform X="-56.674" Y="30.801"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Rectangle Fill="#FF0BB0A3" HorizontalAlignment="Left" Height="187" Margin="611,189,-6,0" RadiusY="1.833" RadiusX="1.833" VerticalAlignment="Top" Width="11" Grid.Row="1">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Rectangle Fill="#FF0BB0A3" HorizontalAlignment="Left" Height="188" Margin="428,346,0,-96" RadiusY="1.833" RadiusX="1.833" VerticalAlignment="Top" Width="10" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.608"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Ellipse Fill="#FF22C9BA" HorizontalAlignment="Left" Height="16" Margin="73,251,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-53.326"/>
+                    <TranslateTransform X="-56.674" Y="30.801"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Ellipse.Stroke>
+        </Ellipse>
+    </Grid>
+</Page>

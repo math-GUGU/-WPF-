@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9F1E127-5629-4336-85DF-E4CE7FBDA8CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>primer_league</RootNamespace>
+    <AssemblyName>primer league</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.17\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ScoreBoardList.xaml.cs">
+      <DependentUpon>ScoreBoardList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchGame.xaml.cs">
+      <DependentUpon>SearchGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPlayer.xaml.cs">
+      <DependentUpon>SelectPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShooterList.xaml.cs">
+      <DependentUpon>ShooterList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClub.xaml.cs">
+      <DependentUpon>UpdateClub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGameInfo.xaml.cs">
+      <DependentUpon>UpdateGameInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePlayerInfo.xaml.cs">
+      <DependentUpon>UpdatePlayerInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="球场.xaml.cs">
+      <DependentUpon>球场.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CheckIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CheckIn.xaml.cs">
+      <DependentUpon>CheckIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayerInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScoreBoardList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShooterList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateClub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateGameInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdatePlayerInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="球场.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerInfo.xaml.cs">
+      <DependentUpon>PlayerInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\球员能力值背景.jpeg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO\球员能力值背景.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录页背景.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO\登陆界面.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO\ChNy21rWqceANk1AAAOWhlDDKgM803.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO\切尔西.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO\search_16px_1233093_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO\field\切尔西主场7.jpg" />
+    <Resource Include="PHOTO\field\埃弗顿2.jpg" />
+    <Resource Include="PHOTO\field\曼城5.jpeg" />
+    <Resource Include="PHOTO\field\曼联主场6.jpg" />
+    <Resource Include="PHOTO\field\热刺8.jpg" />
+    <Resource Include="PHOTO\field\狼队4.jpg" />
+    <Resource Include="PHOTO\field\莱斯特城3.jpg" />
+    <Resource Include="PHOTO\field\西汉姆联9.jpg" />
+    <Resource Include="PHOTO\field\阿森纳1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO\球队logo\伯恩利.jpg" />
+    <Resource Include="PHOTO\球队logo\伯恩茅斯.png" />
+    <Resource Include="PHOTO\球队logo\切尔西.jpg" />
+    <Resource Include="PHOTO\球队logo\利物浦.jpeg" />
+    <Resource Include="PHOTO\球队logo\南安普顿.jpg" />
+    <Resource Include="PHOTO\球队logo\埃佛顿.jpg" />
+    <Resource Include="PHOTO\球队logo\布莱顿.jpg" />
+    <Resource Include="PHOTO\球队logo\曼城.jpg" />
+    <Resource Include="PHOTO\球队logo\曼联.jpg" />
+    <Resource Include="PHOTO\球队logo\水晶宫.jpg" />
+    <Resource Include="PHOTO\球队logo\沃特福德.jpg" />
+    <Resource Include="PHOTO\球队logo\托特纳姆热刺.jpg" />
+    <Resource Include="PHOTO\球队logo\狼队.png" />
+    <Resource Include="PHOTO\球队logo\纽卡斯尔.jpg" />
+    <Resource Include="PHOTO\球队logo\莱斯特城.jpg" />
+    <Resource Include="PHOTO\球队logo\西汉姆联.jpg" />
+    <Resource Include="PHOTO\球队logo\诺维奇.jpg" />
+    <Resource Include="PHOTO\球队logo\谢菲尔德联.jpeg" />
+    <Resource Include="PHOTO\球队logo\阿斯顿维拉.jpg" />
+    <Resource Include="PHOTO\球队logo\阿森纳.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
